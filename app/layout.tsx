@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import GradualBlurMemo from "@/components/reactBits/GradualBlur";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,11 +24,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} pb-10 antialiased`}
       >
         {children}
+        <GradualBlurMemo
+          target="page"
+          position="bottom"
+          height="5rem"
+          strength={2}
+          divCount={10}
+          curve="bezier"
+          exponential={true}
+          opacity={1}
+        />
       </body>
     </html>
   );
