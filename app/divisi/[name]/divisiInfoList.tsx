@@ -2,7 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { PenjelasanSection } from "../lib/divisi";
+import { PenjelasanSection } from "@/lib/divisi";
+import { Montserrat } from "next/font/google";
+
+const MontserratFont = Montserrat({
+  subsets: ["latin"],
+});
 
 export default function DivisiInfoList({
   penjelasan,
@@ -56,6 +61,13 @@ export default function DivisiInfoList({
                 viewport={{ once: true, amount: 0.2 }}
                 className="w-full lg:w-1/2"
               >
+                {item.judul && (
+                  <p
+                    className={`mt-4 px-4 text-center text-xl leading-relaxed font-bold text-neutral-100 ${MontserratFont.className}`}
+                  >
+                    {item.judul}
+                  </p>
+                )}
                 <p className="mt-4 px-4 text-center leading-relaxed text-neutral-400">
                   {item.deskripsi}
                 </p>

@@ -1,4 +1,4 @@
-import AlumniListClient from "@/components/alumni/alumniListClient";
+import AlumniListClient from "@/app/alumni/alumniListClient";
 import Navbar from "@/components/navbar";
 import { alumniMessages } from "@/lib/alumniMessages";
 

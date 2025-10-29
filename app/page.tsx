@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar";
 import Main from "./Main";
-import AlumniMarquee from "@/components/alumni/alumniMarquee";
+import AlumniMarquee from "@/app/alumni/alumniMarquee";
 import { alumniMessages } from "@/lib/alumniMessages";
 import SectionDivider from "@/components/sectionDivider";
 

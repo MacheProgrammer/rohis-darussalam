@@ -14,7 +14,6 @@ export default function AlumniListClient({
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    // lock scroll saat modal terbuka
     if (open) {
       document.body.style.overflow = "hidden";
     } else {
@@ -32,7 +31,6 @@ export default function AlumniListClient({
 
   const handleClose = () => {
     setOpen(false);
-    // beri delay agar selected tetap saat animasi keluar (opsional)
     setTimeout(() => setSelected(null), 200);
   };
 
@@ -74,7 +72,6 @@ export default function AlumniListClient({
               {m.message}
             </p>
 
-            {/* tombol baca lengkap */}
             <div className="mt-4 flex items-center justify-end">
               <button
                 onClick={() => handleOpen(m)}

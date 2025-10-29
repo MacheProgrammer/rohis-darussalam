@@ -19,6 +19,7 @@ import {
   FaChalkboardTeacher,
   FaCamera,
 } from "react-icons/fa";
+import { PiCrownSimpleFill } from "react-icons/pi";
 
 interface Division {
   name: string;
@@ -31,9 +32,14 @@ export default function ModalDivisi({
   setIsOpen,
 }: {
   isOpen: boolean;
-  setIsOpen: (value: boolean) => void;
+  setIsOpen?: (value: boolean) => void;
 }) {
   const divisions: Division[] = [
+    {
+      name: "Pengurus Harian",
+      icon: <PiCrownSimpleFill />,
+      link: "/divisi/pengurus-harian",
+    },
     { name: "Kaderisasi", icon: <FaUsers />, link: "/divisi/kaderisasi" },
     {
       name: "Divisi HAMAS (Himpunan Anak Masjid)",

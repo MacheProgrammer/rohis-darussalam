@@ -4,10 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaListUl, FaWpforms } from "react-icons/fa";
+import { Montserrat } from "next/font/google";
+
+const MontserratFont = Montserrat({
+  subsets: ["latin"],
+});
+
 function Main() {
   const [isopen, setIsOpen] = useState(false);
   return (
-    <main className="bg-destructive-foreground flex min-h-dvh w-full flex-row items-center px-10 max-md:flex-col">
+    <main className="flex min-h-dvh w-full flex-row items-center px-10 max-md:flex-col">
       <div className="flex h-full flex-3 items-center max-md:mt-10 max-md:w-4/5">
         <Image
           src="/RohisDarussalam.png"
@@ -18,10 +24,12 @@ function Main() {
         ></Image>
       </div>
       <div className="mx-auto flex h-dvh flex-6 flex-col justify-center text-center text-white max-md:justify-start lg:px-10">
-        <h1 className="text-5xl font-extrabold text-green-600 text-shadow-lg/30 text-shadow-green-100">
+        <h1
+          className={`text-5xl font-extrabold text-green-600 text-shadow-lg/30 text-shadow-black ${MontserratFont.className}`}
+        >
           ROHIS DARUSSALAM
         </h1>
-        <h3 className="font-medium">
+        <h3 className="mt-1 font-medium">
           "Bersatu dalam Ukhuwah, Beramal dalam Dakwah"
         </h3>
         <p className="mt-2">

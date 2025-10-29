@@ -5,8 +5,12 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import ModalDivisi from "./modalDivisi";
-
+import { Montserrat } from "next/font/google";
 import clsx from "clsx";
+
+const MontserratFont = Montserrat({
+  subsets: ["latin"],
+});
 
 export default function Navbar({ divisi }: { divisi: string }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -25,17 +29,15 @@ export default function Navbar({ divisi }: { divisi: string }) {
 
   return (
     <>
-      {/* 🟩 NAVBAR */}
-      <div className="fixed top-0 left-0 z-9999 flex h-14 w-full items-center justify-between border-b border-white/10 px-10 font-bold text-green-700 shadow-lg backdrop-blur-md lg:h-16">
-        {/* Logo */}
+      <div className="fixed top-4 left-1/2 z-9999 flex h-14 w-[94%] items-center justify-between border-b border-white/10 bg-white/20 px-10 font-extrabold text-green-600 shadow-lg backdrop-blur-md max-md:top-0 max-md:left-0 max-md:w-full md:-translate-x-1/2 md:rounded-full lg:h-16">
         <Link
           href="/"
-          className="flex flex-row items-center justify-center gap-2 text-lg lg:text-xl"
+          className={`flex flex-row items-center justify-center gap-2 text-lg lg:text-xl ${MontserratFont.className} font-extrabold`}
         >
           <img
             src="/RohisDarussalam.png"
             alt=""
-            className="w-10 -translate-y-0.5"
+            className="w-10 -translate-y-0.5 rounded-full"
           />
           <h2>Rohis Darussalam</h2>
         </Link>
@@ -49,7 +51,7 @@ export default function Navbar({ divisi }: { divisi: string }) {
             onClick={() => setModalOpen(true)}
             className={btnClass("/divisi")}
           >
-            {divisi}
+            {divisi === "Pengurus-harian" ? "Pengurus Harian" : divisi}
           </button>
           <Link href="/berita" className={btnClass("/berita")}>
             Berita
@@ -92,7 +94,7 @@ export default function Navbar({ divisi }: { divisi: string }) {
               animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-lg"
+              className="fixed inset-0 z-2 bg-black/70 backdrop-blur-lg"
               onClick={() => setIsMenuOpen(false)}
             />
 
@@ -102,7 +104,7 @@ export default function Navbar({ divisi }: { divisi: string }) {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "100%", opacity: 0 }}
               transition={{ type: "spring", stiffness: 250, damping: 30 }}
-              className="fixed top-14 right-0 z-40 flex h-max w-2/3 flex-col rounded-bl-lg border-b-2 border-l-2 border-black bg-green-700/35 p-6 text-white shadow-2xl backdrop-blur-md"
+              className="fixed top-14 right-0 z-40 flex h-max w-2/3 flex-col rounded-bl-lg border-b-2 border-l-2 border-black bg-green-700/35 p-6 font-extrabold text-white shadow-2xl backdrop-blur-md"
             >
               <div className="flex flex-col space-y-4 text-lg">
                 <Link
@@ -116,7 +118,7 @@ export default function Navbar({ divisi }: { divisi: string }) {
                   onClick={() => setModalOpen(true)}
                   className={`${btnClass("/divisi")} text-left`}
                 >
-                  {divisi}
+                  {divisi === "Pengurus-harian" ? "Pengurus Harian" : divisi}
                 </button>
                 <Link
                   href="/berita"

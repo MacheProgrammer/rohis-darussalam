@@ -1,11 +1,17 @@
+import Squares from "@/components/reactBits/Squares";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Karla } from "next/font/google";
 import GradualBlurMemo from "@/components/reactBits/GradualBlur";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const karla = Karla({
+  subsets: ["latin"],
+  weight: "500",
 });
 
 const geistMono = Geist_Mono({
@@ -24,10 +30,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark bg-transparent">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} pb-10 antialiased`}
+        className={`${karla.className} ${geistMono.variable} pb-10 antialiased`}
       >
+        <div className="fixed inset-0 -z-1">
+          <Squares
+            speed={0.3}
+            squareSize={40}
+            direction="diagonal"
+            borderColor="#3f4e70"
+            hoverFillColor="#222"
+            backgroundColor="#0f172a"
+          />
+        </div>
+
         {children}
         <GradualBlurMemo
           target="page"

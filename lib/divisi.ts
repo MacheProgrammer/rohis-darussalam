@@ -19,7 +19,7 @@ export type Divisi = {
 };
 
 export const divisiData: Record<string, Divisi> = {
-  kaderisasi: {
+  "pengurus-harian": {
     nama: "Kaderisasi",
     deskripsiPendek: "Membina kader Rohis agar berakhlak dan berintegritas.",
     programKerja: [
@@ -36,6 +36,36 @@ export const divisiData: Record<string, Divisi> = {
     ],
     penjelasan: [
       {
+        deskripsi:
+          "Divisi ini fokus pada pembentukan karakter anggota melalui kegiatan Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam voluptas alias sit aliquid est facere dolor sapiente harum ipsa.",
+        foto: "/ex1.jpg",
+      },
+      {
+        deskripsi:
+          "Mentoring dilakukan rutin untuk meningkatkan wawasan keislaman ...",
+        foto: "/ex2.jpg",
+      },
+    ],
+    gallery: "/ex1.jpg",
+  },
+  kaderisasi: {
+    nama: "Kaderisasi",
+    deskripsiPendek: "Membina kader Rohis agar berakhlak dan berintegritas.",
+    programKerja: [
+      {
+        nama: "Latihan Kepemimpinan",
+        foto: "/ex1.jpg",
+        info: "20-10-2025",
+      },
+      {
+        nama: "Mentoring",
+        foto: "/ex2.jpg",
+        info: "15-12-2025",
+      },
+    ],
+    penjelasan: [
+      {
+        judul: "Icikiwir",
         deskripsi:
           "Divisi ini fokus pada pembentukan karakter anggota melalui kegiatan Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam numquam voluptas alias sit aliquid est facere dolor sapiente harum ipsa.",
         foto: "/ex1.jpg",

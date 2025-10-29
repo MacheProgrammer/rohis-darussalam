@@ -5,7 +5,7 @@ import AlumniCard from "./alumniCard";
 import ModalAlumni from "./modalAlumni";
 import type { AlumniMessage } from "../../lib/alumniMessages";
 import Link from "next/link";
-import GradualBlurMemo from "../reactBits/GradualBlur";
+import GradualBlurMemo from "../../components/reactBits/GradualBlur";
 import { FaArrowRight } from "react-icons/fa";
 
 /**
@@ -93,7 +93,7 @@ export default function AlumniMarquee({
           target="parent"
           position="right"
           height="4rem"
-          strength={2}
+          strength={1.5}
           divCount={5}
           curve="bezier"
           exponential={true}
@@ -104,7 +104,7 @@ export default function AlumniMarquee({
           target="parent"
           position="left"
           height="4rem"
-          strength={2}
+          strength={1.5}
           divCount={5}
           curve="bezier"
           exponential={true}
