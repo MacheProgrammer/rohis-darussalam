@@ -32,7 +32,7 @@ export default function ModalDivisi({
   setIsOpen,
 }: {
   isOpen: boolean;
-  setIsOpen?: (value: boolean) => void;
+  setIsOpen: (value: boolean) => void;
 }) {
   const divisions: Division[] = [
     {

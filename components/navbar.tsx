@@ -19,9 +19,9 @@ export default function Navbar({ divisi }: { divisi: string }) {
 
   const btnClass = (path: string) =>
     clsx(
-      "cursor-pointer rounded-lg px-4 py-2 transition duration-300 ease-in-out max-md:border max-md:border-black",
+      "cursor-pointer rounded-lg px-4 py-2 transition duration-300 ease-in-out max-md:border hover:scale-110  max-md:border-black",
       pathName === path || pathName.startsWith(path + "/")
-        ? "bg-neutral-600/10 scale-105"
+        ? "bg-neutral-600/40 scale-115"
         : "hover:bg-neutral-600/30",
     );
 
@@ -84,7 +84,7 @@ export default function Navbar({ divisi }: { divisi: string }) {
         </button>
       </div>
 
-      {/* 🌫️ Overlay + Blur background */}
+      {/* Overlay + Blur background */}
       <AnimatePresence>
         {isMenuOpen && (
           <>

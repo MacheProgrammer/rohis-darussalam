@@ -13,7 +13,7 @@ const error = () => {
       </h3>
       <Link
         href="/"
-        className="bg-primary hover:text-primary mt-5 flex h-20 w-4/5 max-w-2xl items-center justify-center rounded-full text-2xl font-extrabold text-white transition duration-500 ease-in-out hover:scale-110 hover:bg-white active:scale-95"
+        className="bg-primary hover:text-primary mt-5 flex h-20 w-4/5 max-w-xl items-center justify-center rounded-full text-2xl font-extrabold text-white transition duration-500 ease-in-out hover:scale-110 hover:bg-white active:scale-95"
       >
         Halaman Utama
       </Link>

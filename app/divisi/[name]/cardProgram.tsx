@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Program } from "../lib/divisi";
+import { Program } from "@/lib/divisi";
 import { motion } from "framer-motion";
 
 export default function CardProgram({ program }: { program: Program }) {
@@ -21,7 +21,9 @@ export default function CardProgram({ program }: { program: Program }) {
       </div>
 
       <div className="p-4">
-        <h4 className="text-lg font-semibold text-gray-800">{program.nama}</h4>
+        <h4 className="text-lg font-semibold text-gray-800 uppercase">
+          {program.nama}
+        </h4>
         <p className="mt-2 text-sm wrap-break-word whitespace-normal text-gray-600">
           {program.info}
         </p>

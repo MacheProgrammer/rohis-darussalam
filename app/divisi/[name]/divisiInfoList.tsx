@@ -34,7 +34,6 @@ export default function DivisiInfoList({
                 reverse ? "lg:flex-row-reverse" : ""
               }`}
             >
-              {/* Gambar */}
               <motion.div
                 initial={imageFrom}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -53,7 +52,6 @@ export default function DivisiInfoList({
                 </div>
               </motion.div>
 
-              {/* Teks */}
               <motion.div
                 initial={textFrom}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -61,13 +59,11 @@ export default function DivisiInfoList({
                 viewport={{ once: true, amount: 0.2 }}
                 className="w-full lg:w-1/2"
               >
-                {item.judul && (
-                  <p
-                    className={`mt-4 px-4 text-center text-xl leading-relaxed font-bold text-neutral-100 ${MontserratFont.className}`}
-                  >
-                    {item.judul}
-                  </p>
-                )}
+                <p
+                  className={`mt-4 px-4 text-center text-xl leading-relaxed font-bold text-neutral-100 uppercase ${MontserratFont.className}`}
+                >
+                  {item.judul}
+                </p>
                 <p className="mt-4 px-4 text-center leading-relaxed text-neutral-400">
                   {item.deskripsi}
                 </p>

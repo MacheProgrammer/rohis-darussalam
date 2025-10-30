@@ -48,7 +48,7 @@ export default function AlumniMarquee({
 
   return (
     <section className="relative w-full overflow-hidden py-10">
-      <div className="container mx-auto px-4">
+      <div className="mx-auto">
         <h2 className="mb-6 text-center text-2xl font-bold">Pesan Alumni</h2>
         {/* Layers */}
         <div className="space-y-6">
