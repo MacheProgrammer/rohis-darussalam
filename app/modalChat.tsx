@@ -25,11 +25,11 @@ export default function ModalChat({
   setIsOpen: (value: boolean) => void;
 }) {
   const chats: Chats[] = [
-    { name: "Lorem Ipsum 75", link: "/divisi/kaderisasi", idLine: "@908ke" },
+    { name: "Chantika 75", link: "/divisi/kaderisasi", idLine: "@slvcaca" },
     {
-      name: "Lorem Polisom 75",
+      name: "Syaza 75",
       link: "/divisi/hamas",
-      idLine: "@konesmk",
+      idLine: "@syazahratul",
     },
   ];
 
@@ -45,8 +45,7 @@ export default function ModalChat({
 
         <div className="mt-4 space-y-3">
           {chats.map((c, idx) => (
-            <Link
-              href={c.link}
+            <div
               key={idx}
               className="hover:bg-secondary flex cursor-pointer items-center gap-3 rounded-lg p-2 transition duration-300 ease-in-out hover:scale-105 active:scale-95"
             >
@@ -57,7 +56,7 @@ export default function ModalChat({
                 <h2>{c.name}</h2>
                 <h3>{c.idLine}</h3>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </DialogContent>

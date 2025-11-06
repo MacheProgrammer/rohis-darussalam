@@ -21,12 +21,9 @@ export default function CardProgram({ program }: { program: Program }) {
       </div>
 
       <div className="p-4">
-        <h4 className="text-lg font-semibold text-gray-800 uppercase">
+        <h4 className="text-center text-lg font-semibold text-gray-800 uppercase">
           {program.nama}
         </h4>
-        <p className="mt-2 text-sm wrap-break-word whitespace-normal text-gray-600">
-          {program.info}
-        </p>
       </div>
     </motion.div>
   );

@@ -24,7 +24,7 @@ export default function FooterDivisi({
             <div className="relative mx-auto aspect-video max-w-lg">
               <Image
                 src={gallery}
-                alt={`foto `}
+                alt={divisi}
                 fill
                 className="rounded-lg object-cover"
               />
@@ -44,12 +44,12 @@ export default function FooterDivisi({
           viewport={{ once: true, amount: 0.2 }}
           className="w-full"
         >
-          <div className="relative mx-auto aspect-video max-w-lg">
+          <div className="relative mx-auto aspect-video max-w-lg overflow-hidden rounded-lg">
             <Image
               src={gallery}
-              alt={`foto `}
+              alt={divisi}
               fill
-              className="rounded-lg object-cover"
+              className="aspect-video rounded-lg object-contain"
             />
           </div>
           <h4 className="mt-6 text-center text-xl font-semibold">{`${divisi} 24/25`}</h4>

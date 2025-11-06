@@ -12,7 +12,7 @@ export default function SplashScreen({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 4000);
+    const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -38,8 +38,8 @@ export default function SplashScreen({
               <Image
                 src="/rohis.gif"
                 alt="Logo Rohis Darussalam"
-                width={200}
-                height={200}
+                width={400}
+                height={400}
                 priority
                 unoptimized
                 className="object-contain mix-blend-screen"

@@ -10,7 +10,7 @@ export default function Home() {
     <div className="w-full justify-around overflow-x-hidden">
       <Navbar divisi="Divisi" />
       <Main />
-      <SectionDivider />
+      {/* <SectionDivider />
       <section>
         <div className="mx-auto w-full">
           <AlumniMarquee
@@ -19,7 +19,7 @@ export default function Home() {
             speeds={[36, 50, 70]}
           />
         </div>
-      </section>
+      </section> */}
       <Footer />
     </div>
   );

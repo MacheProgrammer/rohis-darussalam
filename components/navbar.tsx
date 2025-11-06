@@ -39,7 +39,7 @@ export default function Navbar({ divisi }: { divisi: string }) {
             alt=""
             className="w-10 -translate-y-0.5 rounded-full"
           />
-          <h2>Rohis Darussalam</h2>
+          <h2>ROHIS Darussalam</h2>
         </Link>
 
         {/* Desktop Menu */}
@@ -59,6 +59,9 @@ export default function Navbar({ divisi }: { divisi: string }) {
           <Link href="/infaq" className={btnClass("/infaq")}>
             Infaq
           </Link>
+          {/* <Link href="/alumni" className={btnClass("/alumni")}>
+            Alumni
+          </Link> */}
         </div>
 
         {/* Mobile Hamburger */}
@@ -134,6 +137,13 @@ export default function Navbar({ divisi }: { divisi: string }) {
                 >
                   Infaq
                 </Link>
+                {/* <Link
+                  href="/alumni"
+                  className={btnClass("/alumni")}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Alumni
+                </Link> */}
               </div>
             </motion.div>
           </>

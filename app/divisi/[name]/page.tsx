@@ -8,9 +8,14 @@ import { capitalize } from "@/lib/utils";
 import SectionDivider from "@/components/sectionDivider";
 import { MontserratFont } from "@/lib/utils";
 import Footer from "@/components/footer";
+import { use } from "react";
 
-export default function Page({ params }: { params: { name: string } }) {
-  const { name: url } = params;
+export default function Page({
+  params,
+}: {
+  params: Promise<{ name: string }>;
+}) {
+  const { name: url } = use(params);
   const capitalized: string = capitalize(url);
 
   const data = divisiData[url];
