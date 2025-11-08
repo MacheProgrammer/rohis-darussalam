@@ -25,10 +25,14 @@ export default function ModalChat({
   setIsOpen: (value: boolean) => void;
 }) {
   const chats: Chats[] = [
-    { name: "Chantika 75", link: "/divisi/kaderisasi", idLine: "@slvcaca" },
+    {
+      name: "Chantika 75",
+      link: "https://line.me/ti/p/YT2fEJsQhR",
+      idLine: "@slvcaca",
+    },
     {
       name: "Syaza 75",
-      link: "/divisi/hamas",
+      link: "https://line.me/ti/p/pDDIeGgCBL",
       idLine: "@syazahratul",
     },
   ];
@@ -52,10 +56,10 @@ export default function ModalChat({
               <span className="text-primary w-10 text-lg">
                 <FaLine className="h-auto w-full" />
               </span>
-              <div className="font-bold">
+              <Link href={c.link} className="font-bold">
                 <h2>{c.name}</h2>
                 <h3>{c.idLine}</h3>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

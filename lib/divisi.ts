@@ -344,7 +344,7 @@ export const divisiData: Record<string, Divisi> = {
     programKerja: [
       {
         nama: "CBR (Cuci Bersih Rukuh)",
-        foto: "/divisi/keakhwatan/cbr.png",
+        foto: "/divisi/keakhwatan/cbr.jpeg",
         info: "2025-10-20",
       },
       {
@@ -363,7 +363,7 @@ export const divisiData: Record<string, Divisi> = {
         judul: "CBR (Cuci Bersih Rukuh)",
         deskripsi:
           "Dibentuk jadwal piket yang dilakukan oleh seluruh anggota Divisi Keakhwatan untuk membereskan, menata, dan memilah rukuh yang sekiranya sudah tidak layak pakai. Serta, melaundry rukuh setiap 2 bulan sekali. Dibentuk panitia yang bertugas menerima donasi rukuh dari teman teman.",
-        foto: "/divisi/keakhwatan/cbr.png",
+        foto: "/divisi/keakhwatan/cbr.jpeg",
       },
       {
         judul: "KETCHE (Keterampilan Mache)",

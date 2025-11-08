@@ -66,12 +66,12 @@ export default function page() {
           <p className="font-semibold">Pengurus Harian terdiri atas:</p>
           <ul className="mb-4 list-disc space-y-1 pl-6">
             <li>Roisul Amm</li>
-            <li>Roisul Ula’</li>
+            <li>Roisul Ula'</li>
             <li>Roisah</li>
+            <li>Sekretaris Umum</li>
             <li>Sekretaris 1</li>
-            <li>Sekretaris 2</li>
+            <li>Bendahara Umum</li>
             <li>Bendahara 1</li>
-            <li>Bendahara 2</li>
           </ul>
 
           <p className="font-semibold">Divisi yang ada sebanyak tujuh (7):</p>

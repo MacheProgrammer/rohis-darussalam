@@ -15,7 +15,7 @@ function Main() {
   const [divisiIsopen, setDivisiIsOpen] = useState(false);
   const [chatIsopen, setChatIsOpen] = useState(false);
   return (
-    <main className="flex h-dvh w-dvw flex-row items-center max-md:flex-col max-md:px-5 lg:px-10">
+    <main className="flex h-auto w-dvw flex-row items-center max-md:flex-col max-md:px-5 lg:px-10">
       <div className="flex h-full flex-3 items-center max-md:mt-10 max-md:w-4/5">
         <Image
           src="/RohisDarussalam.png"
