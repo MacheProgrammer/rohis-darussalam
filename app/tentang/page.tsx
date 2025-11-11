@@ -1,6 +1,13 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { MontserratFont } from "@/lib/utils";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tentang",
+  description:
+    "Profil lengkap Rohis Darussalam SMA Negeri 5 Yogyakarta: visi, misi, dan struktur organisasi.",
+};
 
 export default function page() {
   return (

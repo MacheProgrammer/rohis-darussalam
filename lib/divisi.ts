@@ -10,9 +10,17 @@ export type PenjelasanSection = {
   foto: string;
 };
 
+export type PenjelasanDivisi = {
+  first: string;
+  sabda: string;
+  quotes: string;
+  ayat: string;
+  last: string;
+};
+
 export type Divisi = {
   nama: string;
-  deskripsi?: string;
+  deskripsi?: PenjelasanDivisi;
   programKerja: Program[];
   penjelasan: PenjelasanSection[];
   gallery: string;
@@ -21,8 +29,15 @@ export type Divisi = {
 export const divisiData: Record<string, Divisi> = {
   "pengurus-harian": {
     nama: "Pengurus Harian",
-    deskripsi:
-      "lorem ipsum dolor sut ami=et guehw smbc okswuegh akemazodkskdwjkdwkodwjk",
+    deskripsi: {
+      first:
+        "Pengurus Harian adalah garda terdepan dan pemegang amanah tertinggi dalam tubuh Rohis Darussalam. Mereka bukan sekadar pengatur jalannya organisasi, tetapi juga penjaga arah dan ruh dakwah agar tetap berada di jalan yang diridhai Allah.",
+      sabda: "Allah Ta'ala berfirman:",
+      quotes:
+        "“Dan tolong-menolonglah kamu dalam (mengerjakan) kebajikan dan takwa, dan jangan tolong-menolong dalam berbuat dosa dan permusuhan.”",
+      ayat: "(QS. Al-Māidah: 2)",
+      last: "Dengan semangat ayat ini, Pengurus Harian memimpin dengan kesadaran bahwa setiap keputusan bukan hanya tanggung jawab duniawi, tetapi juga pertanggungjawaban di hadapan Allah. Mereka mengikat seluruh divisi dengan tali koordinasi yang kokoh, menjaga arah perjuangan agar tetap terarah, dan menumbuhkan sinergi yang dilandasi niat lillahi ta’ala. Dalam keheningan doa dan kerja nyata, mereka memastikan seluruh langkah organisasi bergerak sesuai ridha-Nya.",
+    },
     programKerja: [
       {
         nama: "Mabit",
@@ -65,6 +80,15 @@ export const divisiData: Record<string, Divisi> = {
 
   kaderisasi: {
     nama: "Kaderisasi",
+    deskripsi: {
+      first:
+        "Divisi Kaderisasi adalah jantung pembinaan generasi penerus. Ia berperan dalam menumbuhkan tunas-tunas baru yang akan melanjutkan perjuangan dakwah di masa depan.",
+      sabda: "Rasulullah SAW bersabda:",
+      quotes:
+        "“Setiap kalian adalah pemimpin, dan setiap pemimpin akan dimintai pertanggungjawaban atas yang dipimpinnya.”",
+      ayat: "(HR. Bukhari dan Muslim)",
+      last: "Hadis ini menjadi pengingat bahwa membentuk kader bukan sekadar menyiapkan penerus, melainkan menanam nilai kepemimpinan yang berlandaskan iman. Divisi ini hadir dengan keikhlasan untuk membimbing, memantau, dan menumbuhkan semangat perjuangan di hati setiap anggota. Mereka menjadi tangan yang menuntun, bukan hanya dalam organisasi, tapi juga dalam perjalanan spiritual menuju kedewasaan iman dan amal.",
+    },
     programKerja: [
       {
         nama: "Monitoring",
@@ -107,6 +131,15 @@ export const divisiData: Record<string, Divisi> = {
 
   dakwah: {
     nama: "Dakwah",
+    deskripsi: {
+      first:
+        "Divisi Dakwah adalah ruh dari seluruh kegiatan Rohis Darussalam. Dari sinilah cahaya ilmu dan hikmah dipancarkan untuk menerangi hati-hati di lingkungan sekolah.",
+      sabda: "Allah berfirman:",
+      quotes:
+        "“Serulah (manusia) kepada jalan Tuhanmu dengan hikmah dan pelajaran yang baik, dan bantahlah mereka dengan cara yang lebih baik.”",
+      ayat: "(QS. An-Nahl: 125)",
+      last: "Ayat ini menjadi panduan langkah bahwa dakwah bukan sekadar menyampaikan, tetapi mengajak dengan kasih sayang dan kebijaksanaan. Divisi Dakwah menjadi penjaga cahaya itu — membimbing agar setiap anggota mampu menebarkan nilai Islam dengan santun, tanpa menghakimi, dan dengan niat tulus untuk memperbaiki diri bersama.",
+    },
     programKerja: [
       {
         nama: "PHBI",
@@ -149,6 +182,15 @@ export const divisiData: Record<string, Divisi> = {
 
   tarbiyah: {
     nama: "Tarbiyah",
+    deskripsi: {
+      first:
+        "Divisi Tarbiyah adalah ladang ilmu dan pembinaan jiwa. Melalui tarbiyah, setiap anggota belajar mengenali diri, memperdalam pemahaman agama, dan memperbaiki akhlak secara berkelanjutan.",
+      sabda: "Allah berfirman:",
+      quotes:
+        "“Allah akan meninggikan derajat orang-orang yang beriman di antara kamu dan orang-orang yang diberi ilmu beberapa derajat.”",
+      ayat: "(QS. Al-Mujādilah: 11)",
+      last: "Dengan landasan ini, Divisi Tarbiyah mengingatkan bahwa ilmu bukan sekadar untuk dihafal, tetapi untuk menghidupkan hati. Mereka membangun lingkungan belajar yang menumbuhkan semangat mencari ilmu sekaligus membentuk pribadi yang lembut, sabar, dan beradab. Melalui tarbiyah, lahirlah generasi yang bukan hanya cerdas secara intelektual, tetapi juga matang secara spiritual.",
+    },
     programKerja: [
       {
         nama: "SCA",
@@ -202,6 +244,15 @@ export const divisiData: Record<string, Divisi> = {
 
   gaza: {
     nama: "Gaza",
+    deskripsi: {
+      first:
+        "Divisi Gaza adalah wujud kasih sayang Islam yang nyata. Ia berperan menumbuhkan empati, kepedulian, dan kepekaan terhadap sesama, menjadikan setiap anggota Rohis sebagai insan yang hadir membawa manfaat.",
+      sabda: "Rasulullah SAW bersabda:",
+      quotes:
+        "“Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia.”",
+      ayat: "(HR. Ahmad)",
+      last: "Berangkat dari pesan luhur ini, Divisi Gaza bergerak dengan hati yang lembut — bukan sekadar memberi bantuan, tetapi menanamkan nilai ihsan dalam setiap tindakan. Mereka mengingatkan bahwa Islam bukan hanya ibadah ritual, melainkan juga tindakan sosial yang penuh kasih. Dalam setiap langkahnya, mereka menebar semangat ukhuwah, menguatkan tali persaudaraan, dan meneladani kepedulian Rasulullah kepada umatnya.",
+    },
     programKerja: [
       {
         nama: "Galdan",
@@ -288,6 +339,15 @@ export const divisiData: Record<string, Divisi> = {
 
   hamas: {
     nama: "Hamas",
+    deskripsi: {
+      first:
+        "Divisi Hamas adalah penjaga rumah Allah — Masjid Puspanegara — yang menjadi pusat kegiatan Rohis Darussalam. Ia menjadi tempat bersemainya ketenangan hati dan titik awal dakwah yang menghidupkan lingkungan sekolah.",
+      sabda: "Rasulullah SAW bersabda:",
+      quotes:
+        "“Barangsiapa yang membangun masjid karena Allah, maka Allah akan membangunkan baginya rumah di surga.”",
+      ayat: "(HR. Bukhari dan Muslim)",
+      last: "Hadis ini menjadi semangat bagi para anggota Hamas untuk senantiasa memakmurkan masjid, bukan hanya secara fisik, tetapi juga dengan amal dan ilmu. Dari masjid, mereka belajar makna kebersihan hati, kebersamaan dalam ibadah, dan keteguhan dalam menjaga keimanan. Hamas bukan sekadar divisi — ia adalah simbol kecintaan terhadap tempat paling mulia di bumi.",
+    },
     programKerja: [
       {
         nama: "Diklat Khatib",
@@ -341,6 +401,15 @@ export const divisiData: Record<string, Divisi> = {
 
   keakhwatan: {
     nama: "Keakhwatan",
+    deskripsi: {
+      first:
+        "Divisi Keakhwatan adalah ruang pembinaan bagi para muslimah untuk tumbuh dalam keimanan, menjaga kehormatan, dan memperkuat peran sebagai penjaga nilai-nilai kebaikan di sekolah.",
+      sabda: "Allah berfirman:",
+      quotes:
+        "“Dan orang-orang beriman, laki-laki dan perempuan, sebagian mereka adalah penolong bagi sebagian yang lain. Mereka menyuruh kepada yang ma'ruf dan mencegah dari yang munkar...”",
+      ayat: "(QS. At-Taubah: 71)",
+      last: "Ayat ini menjadi fondasi kuat bagi para akhwat untuk saling menasihati, saling menguatkan, dan berjalan bersama dalam ketaatan. Divisi Keakhwatan hadir sebagai tempat belajar untuk menjadi muslimah yang berilmu, santun, dan berdaya, tanpa kehilangan kelembutan dan fitrah mulianya. Di sini, para akhwat menemukan arti kebersamaan yang dilandasi ukhuwah fillah yang tulus.",
+    },
     programKerja: [
       {
         nama: "CBR (Cuci Bersih Rukuh)",
@@ -383,6 +452,15 @@ export const divisiData: Record<string, Divisi> = {
 
   media: {
     nama: "Media",
+    deskripsi: {
+      first:
+        "Divisi Media adalah penyampai pesan dakwah di era digital. Melalui tangan-tangan kreatifnya, pesan Islam disebarkan dengan cara yang indah, santun, dan relevan dengan zaman.",
+      sabda: "Allah berfirman:",
+      quotes:
+        "“Dan sampaikanlah kabar gembira kepada hamba-hamba-Ku, (yaitu) mereka yang mendengarkan perkataan lalu mengikuti yang terbaik di antaranya.”",
+      ayat: "(QS. Az-Zumar: 17-18)",
+      last: "Ayat ini menjadi inspirasi bagi Divisi Media untuk terus menebar pesan kebaikan dengan hikmah dan keindahan. Mereka memahami bahwa setiap kata, gambar, dan suara bisa menjadi jalan hidayah bila digunakan dengan niat yang benar. Maka setiap karya bukan sekadar konten, tetapi wasilah dakwah yang menyentuh hati banyak orang.",
+    },
     programKerja: [
       {
         nama: "Poster Kegiatan",

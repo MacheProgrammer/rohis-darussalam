@@ -21,8 +21,48 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rohis Darussalam",
-  description: "Bersatu dalam Ukhuwah, Beramal dalam Dakwah",
+  title: {
+    default: "Rohis Darussalam",
+    template: "%s | Rohis Darussalam",
+  },
+  description:
+    "Bersatu dalam Ukhuwah, Beramal dalam Dakwah — Website resmi Rohis Darussalam SMA Negeri 5 Yogyakarta.",
+  keywords: [
+    "Rohis Darussalam",
+    "Rohis SMAN 5 YK",
+    "Rohis Mache",
+    "Organisasi Siswa Islam",
+    "Kegiatan Rohani Islam",
+    "Rohis SMA Negeri 5 Yogyakarta",
+  ],
+  authors: [{ name: "Rohis Darussalam", url: "https://rohis.mache.id" }],
+  creator: "Rohis Darussalam",
+  publisher: "Rohis Darussalam",
+  metadataBase: new URL("https://rohis.mache.id"),
+  openGraph: {
+    title: "Rohis Darussalam SMAN 5 Yogyakarta",
+    description:
+      "Bersatu dalam Ukhuwah, Beramal dalam Dakwah — Website resmi Rohis Darussalam SMA Negeri 5 Yogyakarta.",
+    url: "https://rohis.mache.id",
+    siteName: "Rohis Darussalam",
+    images: [
+      {
+        url: "https://rohis.mache.id/RohisDarussalam.png",
+        width: 781,
+        height: 805,
+        alt: "Rohis Darussalam Logo",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
