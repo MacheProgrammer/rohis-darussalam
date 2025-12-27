@@ -6,6 +6,7 @@ import { useState } from "react";
 import { FaListUl, FaWpforms } from "react-icons/fa";
 import { Montserrat } from "next/font/google";
 import ModalChat from "./modalChat";
+import { IoMdInformationCircleOutline } from "react-icons/io";
 
 const MontserratFont = Montserrat({
   subsets: ["latin"],
@@ -13,7 +14,7 @@ const MontserratFont = Montserrat({
 
 function Main() {
   const [divisiIsopen, setDivisiIsOpen] = useState(false);
-  const [chatIsopen, setChatIsOpen] = useState(false);
+  // const [chatIsopen, setChatIsOpen] = useState(false);
   return (
     <main className="flex h-auto w-dvw flex-row items-center max-md:flex-col max-md:px-5 lg:px-10">
       <div className="flex h-full flex-3 items-center max-md:mt-10 max-md:w-4/5">
@@ -40,13 +41,13 @@ function Main() {
           Negeri 5 Yogyakarta.
         </p>
         <div className="mt-4 flex w-full flex-row gap-3 text-xl max-md:flex-col">
-          <button
-            onClick={() => setChatIsOpen(true)}
+          <Link
+            href="/tentang"
             className="flex h-20 w-full flex-row items-center justify-center gap-4 rounded-2xl bg-green-600 px-8 font-bold transition duration-500 ease-in-out hover:scale-105 hover:bg-white hover:text-green-600 active:scale-90 max-md:h-15"
           >
-            <p>DAFTAR SEKARANG</p>
-            <FaWpforms />
-          </button>
+            <p>Tentang</p>
+          <IoMdInformationCircleOutline className="scale-130"/>
+          </Link>
           <a
             onClick={() => setDivisiIsOpen(true)}
             className="flex h-20 w-full cursor-pointer items-center justify-center gap-4 rounded-2xl border-3 border-green-600 bg-transparent p-2 px-8 font-bold transition duration-500 ease-in-out hover:scale-105 hover:border-white hover:bg-white hover:text-green-600 active:scale-90 max-md:h-15"
@@ -56,7 +57,7 @@ function Main() {
         </div>
       </div>
       <ModalDivisi isOpen={divisiIsopen} setIsOpen={setDivisiIsOpen} />
-      <ModalChat isOpen={chatIsopen} setIsOpen={setChatIsOpen} />
+      {/* <ModalChat isOpen={chatIsopen} setIsOpen={setChatIsOpen} /> */}
     </main>
   );
 }
